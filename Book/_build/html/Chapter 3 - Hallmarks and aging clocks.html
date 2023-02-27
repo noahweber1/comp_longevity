@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapter 3 - Hallmarks and aging clocks &#8212; Computational Longevity</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter 4 - Longevity interventions and models" href="Chapter%204%20-%20Longevity%20interventions%20and%20models.html" />
+    <link rel="prev" title="Chapter 2 - Biology basics and measuring biology" href="Chapter%202%20-%20Biology%20basics%20and%20measuring%20biology.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Computational Longevity</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="Chapter%201%20-%20Motivation.html">
+                    Chapter 1 - Motivation and brief overview
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter%202%20-%20Biology%20basics%20and%20measuring%20biology.html">
+   Chapter 2 - Biology basics and measuring biology
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Chapter 3 - Hallmarks and aging clocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter%204%20-%20Longevity%20interventions%20and%20models.html">
+   Chapter 4 - Longevity interventions and models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter%205%20-%20References.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Chapter 3 - Hallmarks and aging clocks.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#new-hallmarks-of-aging">
+   New hallmarks of aging
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extracellular-matrix-ecm-and-its-connection-to-longevity">
+     Extracellular matrix (ECM) and its connection to longevity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#new-hallmarks-of-ageing-a-2022-copenhagen-ageing-meeting-summary">
+   New hallmarks of ageing: a 2022 Copenhagen ageing meeting summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#autophagy">
+     1. Autophagy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inflammation">
+     2. Inflammation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#microbiome-disturbance">
+     3. Microbiome disturbance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#altered-mechanical-properties">
+     4. Altered mechanical properties
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#splicing-regulation">
+     5. Splicing regulation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aging-clocks-causality-and-the-future-of-evaluating-biological-age">
+   Aging clocks, causality and the future of evaluating biological age.
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Chapter 3 - Hallmarks and aging clocks</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#new-hallmarks-of-aging">
+   New hallmarks of aging
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extracellular-matrix-ecm-and-its-connection-to-longevity">
+     Extracellular matrix (ECM) and its connection to longevity
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#new-hallmarks-of-ageing-a-2022-copenhagen-ageing-meeting-summary">
+   New hallmarks of ageing: a 2022 Copenhagen ageing meeting summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#autophagy">
+     1. Autophagy
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inflammation">
+     2. Inflammation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#microbiome-disturbance">
+     3. Microbiome disturbance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#altered-mechanical-properties">
+     4. Altered mechanical properties
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#splicing-regulation">
+     5. Splicing regulation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aging-clocks-causality-and-the-future-of-evaluating-biological-age">
+   Aging clocks, causality and the future of evaluating biological age.
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="chapter-3-hallmarks-and-aging-clocks">
+<h1>Chapter 3 - Hallmarks and aging clocks<a class="headerlink" href="#chapter-3-hallmarks-and-aging-clocks" title="Permalink to this headline">#</a></h1>
+<p>Contents of this chapter are:</p>
+<ul class="simple">
+<li><p>Hallmarks of aging and how tackle them computationally.</p></li>
+<li><p>New hallmarks of aging and how tackle them computationally.</p></li>
+<li><p>Aging clocks, causality and the future of evaluating biological age.</p></li>
+</ul>
+<p><img alt="" src="https://nintil.com/images/2020-01-05-longevity/image-20200117094655213.png" /></p>
+<p>Inspired by the seminal paper in cancer research, the <a class="reference external" href="https://www.cell.com/fulltext/S0092-8674(11)00127-9">hallmarks of cancer</a>, there has been a similiar attempt for aging.</p>
+<p><a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/23746838/">Seminal paper</a> defined the nine (then extended to 10) main “causes” of our decline. The question then becomes:</p>
+<blockquote>
+<div><p><em>Can we frame these problems/horsemen computationally in terms of machine learning and then try to solve them?</em></p>
+</div></blockquote>
+<ol class="simple">
+<li><p><strong>Genomic instability</strong>: DNA replication is not always perfect. Errors in gene expression are typically caught and corrected, but sometimes they are not. These errors can accumulate over time, causing the body to deteriorate and leading to a limit on lifespan. This genetic instability can result in damage and can manifest as diseases such as cancer, muscular dystrophy, and ALS. In this way, genetic instability can be thought of as a faulty copying machine that produces harmful results rather than unreadable pages. <strong>Data?</strong> <a class="reference external" href="https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-018-5330-5">HumCFS</a>: a database of fragile sites in human chromosomes. <strong>What could you do with it?</strong> Identify other fragile chromosomes sites AND link them to other diseases based on atom/chemical level properties.</p></li>
+<li><p><strong>Telomere Attrition</strong>: At the center of a cell, DNA is packaged into thread-like structures called chromosomes. Telomeres, which can be thought of as protective caps on chromosomes, act to protect the core of the chromosome. However, as DNA replicates, telomeres become shorter. When telomeres reach a critical length, the cell can no longer divide and we become more susceptible to disease and death. It has been shown that manipulating the shrinkage of telomeres in mice can affect longevity. <strong>Data?</strong> <a class="reference external" href="http://telomerase.asu.edu/">Telomerase Database</a> <strong>What could you do with it?</strong> <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/28218725/">Telomerase can be used as a target in anti-cancer therapy</a>. What this essentially means is one can find computationally (in-silico) inhibitors that hinder the shrinkage of telomerase. Doing this which we know has positive side effects for longevity.</p></li>
+<li><p><strong>Epigenetic Alterations</strong>: The environment can influence gene expression. Throughout a person’s lifetime, exposure to environmental toxins can alter gene expression in negative ways. For example, exposure to carcinogens can silence the gene that suppresses tumor growth. On the other hand, it is also possible to silence the gene that is responsible for cancer. <strong>Data?</strong> <a class="reference external" href="https://www.nature.com/articles/srep19340">dbEM</a> and <a class="reference external" href="https://genomics.senescence.info/genes/index.html">GenAge</a>: A database of epigenetic modifiers curated from cancerous and normal genomes. <strong>What could you do with it?</strong> Epigenetic proteins are important targets in cancer research. This database provides not only information on epigenetic proteins, but also genomic information related to mutational status, copy number variation, and expression levels of these proteins in tumor samples. This allows for the exploration of proteins that were not previously classified as epigenetic based on their genomic information. <strong>How to utilise GenAge?</strong> There are tools and companies out there that allow for a complete measurement of one genes. ML models could be built that recommend actions based on certain gene structure.</p></li>
+<li><p><strong>Loss of Proteostasis</strong>: Inside a cell, proteins perform a variety of functions including transportation, signaling, regulation of processes, and providing structural support. However, proteins can become less effective over time and the body has mechanisms to recycle them. As we age, this ability can decline, leading to a buildup of toxic proteins that can contribute to diseases such as Alzheimer’s. <strong>Data?</strong> <a class="reference external" href="https://alphafold.ebi.ac.uk/">AlphaFold</a>: Protein Structure Database. <strong>What could you do with it?</strong> Proteins that have become terminally misfolded or are no longer functional must be degraded to prevent harmful effects from their continued presence. Predicting the shape of these proteins, even if they are unknown, can be essential in targeting their degradation.</p></li>
+<li><p><strong>Nutrient Sensing Goes Awry</strong>: The human body requires a diverse range of nutrients to maintain good health. In order for everything to function properly, cells must be able to recognize and process these nutrients. However, this ability can deteriorate with age. For example, one reason people may gain weight as they age is that their cells can no longer effectively metabolize fats and carbohydrates. This can also impact the insulin and IGF-1 pathway and contribute to the development of diabetes. Ultimately, this decline in cellular function can lead to death. <strong>Data?</strong> <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4313349/">Nutrient Sensing Mechanisms and Pathways</a>. <strong>What could you do with it?</strong> <a class="reference external" href="https://genomics.senescence.info/diet/">GenDR Database of Dietary Restriction-Related Genes</a>. Not a direct ML approach but utilising <a class="reference external" href="https://pubs.acs.org/doi/10.1021/acssensors.1c00553">advancements in wearables and mobile sensors</a> to obtain detailed and personalized data on nutrition intake based on an individual’s current metabolic state could have significant impact. For example, measurements of nutrient sensing in different types of cells (such as cancer cells) could be used to adjust nutrient intake in order to achieve a desired effect on those cells, such as cell death. The GenDR Database of Dietary Restriction-Related Genes could also be used in this context to consider the role of genes in this process.</p></li>
+<li><p><strong>Mitochondrial Dysfunction</strong>: Mitochondria are the powerhouses of the cell, converting oxygen and food into energy to fuel cellular processes. However, their performance can decline with age. This can lead to the production of free radicals, a damaging form of oxygen that can damage DNA and proteins and contribute to the development of chronic illnesses associated with aging. <strong>Data?</strong> <a class="reference external" href="https://mseqdr.org/mitobox.php">MSeqDR</a> Mitochondrial Genomic Tools and Databases <strong>What could you do with it?</strong> This curated list of databases could be used to combine measurements of oxygen consumption ratio (OCR), maximal oxygen consumption, and mitochondrial reserve capacity with information on the proteins involved in these processes. Beeing especially interested <a class="reference external" href="https://academic.oup.com/nar/article/47/D1/D1225/5162470?login=false">in proteins that are targets in certain diseases</a>, one could then have clear indicator with wearables or other measurement devices wether some disease is going to be triggered.</p></li>
+<li><p><strong>Cellular Senescence</strong>: When cells are subjected to stress, they may become “senescent” and lose their ability to divide and become resistant to death. These “zombie cells” cannot be removed from the body and can accumulate over time, infecting neighboring cells and ultimately leading to a state of chronic inflammation and debilitation. <strong>Data?</strong> <a class="reference external" href="https://genomics.senescence.info/cells/">CellAge</a> Database of Cell Senescence Genes <strong>What could you do with it?</strong> Based on an individual’s genetic makeup, a model could be developed to recommend altering genes associated with cellular senescence. Alternatively, further analysis could be performed to determine the appropriate action to take with regard to the genes involved in senescence. This approach has been explored in previous <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/32264951/">research</a></p></li>
+<li><p><strong>Stem Cell Exhaustion</strong>: As we age, our supply of stem cells decreases significantly in some cases. Additionally, the remaining stem cells become less active, resulting in a loss of the body’s ability to repair tissues and organs. While stem cell therapies exist, it is possible that AI could be used to improve their effectiveness. <strong>Data?</strong> <a class="reference external" href="https://academic.oup.com/nar/advance-articles?login=false">Stemformatics</a>: visualize and download curated stem cell data <strong>What could you do with it?</strong> A curated list of potenital AI applications in stem cell research can be found <a class="reference external" href="https://www.eurekaselect.com/article/110522">here</a>. A crucial challenge in designing stem cell therapies for central nervous system (CNS) diseases is the differentiation of neural stem cells (NSCs) into neurons. This process is complex and not yet fully understood, particularly at the early stages of development. Novel <a class="reference external" href="https://www.nature.com/articles/s41467-021-22758-0">nature</a> publication shows that deep learning could extract minutiae from large-scale datasets, and present a deep neural network model for predictable reliable identification of NSCs fate.</p></li>
+<li><p><strong>Altered Inter Cellular Communication</strong>: Effective communication between cells is essential for the body to function properly. This communication occurs through various systems including the bloodstream, immune system, and endocrine system. Over time, however, signals can become disrupted and cells can become unresponsive or produce inflammation. This inflammation can block further communication, preventing the immune system from identifying and responding to pathogens. <strong>Data?</strong> <a class="reference external" href="https://panglaodb.se/">PanglaoDB</a>: is a database for the scientific community interested in exploration of single cell RNA sequencing experiments from mouse and human. <strong>What could you do with it?</strong> A machine learning tool that can quantitatively infer and analyze intercellular communication could be useful in detecting changes in the organism and informing appropriate actions. A recent publication in the journal Nature describes the development of such a tool. <a class="reference external" href="https://www.nature.com/articles/s41467-021-21246-9">CellChats</a>.</p></li>
+<li><p><strong>Protein crosslinking [extended hallmark]</strong>: Glycation is a phenomenon in which multiple proteins become bonded together by a sugar molecule. Depending on where this occurs, it can be associated with various signs of aging such as wrinkles, arteriosclerosis, cataracts, and kidney failure.
+<strong>Data?</strong> <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4977572/">ProXL</a> (Protein Cross-Linking Database): A Platform for Analysis, Visualization, and Sharing Protein Cross-Linking Mass Spectrometry Data. <strong>What could you do with it?</strong> Developing an ML to identify where this bondage/linkage occurs and what kind of damage it will cause. If labeled data is hard to obtain, clustering techniques can be used to analyze already known bonding regions and try to abstract from there.</p></li>
+</ol>
+<blockquote>
+<div><p><strong>But they are not enough</strong></p>
+</div></blockquote>
+<p><a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/34271186/">JPM argues</a>, that the proposed hallmarks are not causative and explanatory enough of the true complexity of the underlying processes.</p>
+<blockquote>
+<div><p><em>“In this context, the scheme is
+akin to a folding screen bearing a hallmarks of aging diagram that blocks
+the view of the true state of undress of the field. Shivering behind the
+screen is the ailing damage maintenance paradigm. We argue that as a
+field we must look and move beyond the hallmarks to understand the
+process of aging. Only by doing so can paradigms be formulated that
+possess sufficient explanatory power to enable treatments for human
+aging to be developed.”</em></p>
+</div></blockquote>
+<p>It comes back to one of the fallacy I outlined: <strong>Oversimplification of biology.</strong></p>
+<p>So what can be done? Taking the table underneath as insight, one could quantify every possible biomarker. Determine which are statistically significant and try to map novel theory (hallmark) that could causative explanation of this multifactorial complex process we call aging.</p>
+<p>The American Federation for Aging Research (AFAR) recommends the following criteria for biomarkers of aging:</p>
+<ol class="simple">
+<li><p>It must predict a person’s physiological, cognitive, and physical function in an age-related way, independently of chronological age.</p></li>
+<li><p>It must be testable and not harmful to test subjects (for example a blood test or an imaging technique); it must also be technically simple to perform, and it must be accurate and reproducibly without the need for specialized equipment or techniques.</p></li>
+<li><p>It should work in laboratory animals as well as humans since preliminary testing is always done in nonhuman subjects.</p></li>
+</ol>
+<p>Check <a class="reference external" href="https://link.springer.com/article/10.1007/s11912-020-00977-w/tables/2">here</a> for additional details:</p>
+<p><img alt="" src="https://i.postimg.cc/Yq4CNqVz/hallmark.jpg" /></p>
+<p>Another important reference for the biomarkers of aging is the <a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fgene.2021.686320/full">following</a>. The rc-score displays how often a potential biomarker was referred to in reviews, based on the above-described NCBI-PubMed queries.</p>
+<p>Then effort score was added for each potential biomarker. Following values were considered:</p>
+<p>• A low e-score (-) describes a potential biomarker which is easy to sample, to handle and to process (usually automated fast and reliable measurements are available from known sources). For example, blood counts from venous blood qualify, since such blood can be sampled easily, the plasma/serum can be stored at room temperature (up to 3 h for many analytes) or in a standard freezer (≥3 month for most analytes) and be processed by equipment that is regularly available in a standard diagnostic/clinical unit or research laboratory. The costs are low to moderate (≤10 €).</p>
+<p>• A moderate e-score (–) is assigned if one step (sampling, handling, or processing) is associated with substantial extra effort for routine laboratories. This includes sampling under special conditions, a requirement for prompt sample handling, or the need for elaborate validation.</p>
+<p>• A high e-score (—) implies elaborate sampling (e.g., biopsy, lumbar puncture, etc.), handling (e.g., storage in liquid nitrogen) and/or processing (e.g., non-routine nucleotide or protein sequencing). The financial costs are usually high.</p>
+<p><img alt="" src="https://www.frontiersin.org/files/Articles/686320/fgene-12-686320-HTML/image_m/fgene-12-686320-t001.jpg" /></p>
+<p>Again the relevance of these biomarkers is that they could be utilized not only to elucidate new theories and hallmarks computationally but also construct <a class="reference external" href="https://www.technologyreview.com/2022/04/15/1050019/aging-clocks/">aging clocks</a>.</p>
+<section id="new-hallmarks-of-aging">
+<h2>New hallmarks of aging<a class="headerlink" href="#new-hallmarks-of-aging" title="Permalink to this headline">#</a></h2>
+<p>As the research progresses new theories started to emerge that aim to extend the current hallmarks.</p>
+<section id="extracellular-matrix-ecm-and-its-connection-to-longevity">
+<h3>Extracellular matrix (ECM) and its connection to longevity<a class="headerlink" href="#extracellular-matrix-ecm-and-its-connection-to-longevity" title="Permalink to this headline">#</a></h3>
+<p>The extracellular matrix (ECM) is a network of proteins and other molecules that support, surround, and give structure to cells and tissues in the body. The ECM helps cells attach to and communicate with nearby cells, and plays an important role in cell growth, movement, and other functions. This three-dimensional network provides physical structure to the body and serves as a substrate for cells to live and grow. Cells often modify the components of the ECM, such as osteoclasts and osteoblasts, which degrade and lay down bone ECM, respectively.</p>
+<p>Changes to the ECM are often overlooked as a cause of aging, but they can drastically impact cell behavior. Studies have shown that ECM characteristics such as stiffness and chemical composition can affect cell behaviors including proliferation rate, secretome, differentiation, and cellular maintenance. There is growing consensus that ECM-related changes, particularly matrix stiffening, should be considered on a similar level to the other hallmarks of aging.</p>
+<p>“Accumulation of damage to the ECM drives cellular aging and disease progression. Collagen fragmentation, collagen glycation, collagen crosslinking, and aggregation of proteins in the extracellular space affect ECM integrity to accelerate agin.” From <a class="reference external" href="https://www.karger.com/Article/FullText/504295">The Matrisome during Aging and Longevity</a></p>
+<p><img alt="" src="https://www.researchgate.net/profile/Abdelaziz-Ghanemi/publication/340352699/figure/fig1/AS:875550012895237&#64;1585758798873/Example-of-extracellular-matrix-ECM-implications-The-extracellular-matrix-is-involved.png" /></p>
+<p>What questions can be answered computationally? One example would be age-related changes in gene expression of the ECM from publicly available <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/18757743/">datasets</a> of controls &amp; reprogramming experiments.</p>
+</section>
+</section>
+<section id="new-hallmarks-of-ageing-a-2022-copenhagen-ageing-meeting-summary">
+<h2>New hallmarks of ageing: a 2022 Copenhagen ageing meeting summary<a class="headerlink" href="#new-hallmarks-of-ageing-a-2022-copenhagen-ageing-meeting-summary" title="Permalink to this headline">#</a></h2>
+<p>After almost a decade, we have gotten a <a class="reference external" href="https://www.aging-us.com/article/204248/text">formal update</a> on potential novel hallmarks of aging. Here is the list:</p>
+<ol class="simple">
+<li><p>Autophagy</p></li>
+<li><p>Inflammation</p></li>
+<li><p>Microbiome disturbance</p></li>
+<li><p>Altered mechanical properties</p></li>
+<li><p>Splicing dysregulation</p></li>
+</ol>
+<p><img alt="" src="https://www.aging-us.com/article/204248/figure/f1/hero" /></p>
+<p><em>Now our goal is same as for the original hallmarks. We want to describe them briefly, comment the data for them and then pose some question that can be answered computationally.</em></p>
+<section id="autophagy">
+<h3>1. Autophagy<a class="headerlink" href="#autophagy" title="Permalink to this headline">#</a></h3>
+<p><img alt="" src="https://images.theconversation.com/files/436311/original/file-20211208-188518-1fyp5pw.png?ixlib=rb-1.1.0&amp;q=45&amp;auto=format&amp;w=754&amp;h=448&amp;fit=crop&amp;dpr=1" /></p>
+<p>Senescence and autophagy are essential cellular processes that play a role in aging. Senescent cells are damaged cells that stop dividing and secrete cytokines and chemokines that can cause inflammation in neighboring cells. This can lead to tissue damage and promote cancer. Autophagy, on the other hand, is the process by which cells break down and recycle damaged components. This can help repair and prevent damage to cells. Interventions that target pathways involved in aging often upregulate autophagy. Some drugs can also promote autophagy, which can help alleviate the hallmarks of aging.</p>
+<p><strong>What are some interesting computational research questions concerning autophagy?</strong></p>
+<p>If we accept that the molecular damage is confounding variable in aging process, then getting rid of damaged objects would aid in tackling the problem.</p>
+<p><strong>Autophagy measuring and prediction through biomarkers:</strong></p>
+<ul class="simple">
+<li><p>Tsuboyama, Kotaro, et al. “The ATG conjugation systems are important for degradation of the inner autophagosomal membrane.„ - <strong>gives evidence of a direct correlation between LC3-II and p62 and autophagy level</strong></p></li>
+<li><p>Bobillo Lobato, Joaquin, Maria Jiménez Hidalgo, and Luis M. Jiménez Jiménez. “Biomarkers in lysosomal storage diseases.“ — <strong>links potential biomarkers.</strong></p></li>
+</ul>
+<p>Both together give the ability to model the autophagy (flux) levels insilico.</p>
+<p>So the approach would look something like this:</p>
+<p><a href="https://ibb.co/h20my03"><img src="https://i.ibb.co/6DQWmQj/autophagy.jpg" alt="autophagy" border="0"></a></p>
+<p>And the potential input features, that were quantified when taking biomarkers, would be:</p>
+<ul class="simple">
+<li><p>Globotriaosylceramide (Gb3)</p></li>
+<li><p>Glucosylceramide</p></li>
+<li><p>Galactosylceramide</p></li>
+<li><p>Dermatan sulfate</p></li>
+<li><p>Heparan sulfate</p></li>
+<li><p>Hyaluronic acid</p></li>
+<li><p>Glycogen</p></li>
+<li><p>Free cholesterol</p></li>
+<li><p>Calbindin D</p></li>
+<li><p>Myostatin</p></li>
+<li><p>Chitotriosidase</p></li>
+<li><p>HbA1c</p></li>
+<li><p>Glucose level</p></li>
+<li><p>Lipofuscin [Molecular damage in aging Gladyshev <a class="reference external" href="http://et.al">et.al</a>]</p></li>
+<li><p>Acidification [Molecular damage in aging Gladyshev <a class="reference external" href="http://et.al">et.al</a>]</p></li>
+<li><p>enzymatic activity  [Molecular damage in aging Gladyshev <a class="reference external" href="http://et.al">et.al</a>]</p></li>
+<li><p>Lysosomal-associated membrane protein expression [Molecular damage in aging Gladyshev <a class="reference external" href="http://et.al">et.al</a>]</p></li>
+</ul>
+<p>Alternative computational question for autophagy would be:</p>
+<blockquote>
+<div><p>What are some drugs that exhibit the same <a class="reference external" href="https://www.emcdda.europa.eu/document-library/computer-aided-silico-approaches-mode-action-analysis-and-safety-assessment-ostarine-and-4-methylamphetamine_en">mode of action</a> as example underneath.</p>
+</div></blockquote>
+<p>Screening huge libraries of compounds, like <a class="reference external" href="https://paperswithcode.com/dataset/zinc">ZINC</a> and after finding the same mode of action, perform <a class="reference external" href="https://medium.com/&#64;medicilon2004/effective-use-of-in-silico-tools-in-lead-optimization-62fd2cd3de55">lead optimization</a> might produce interesting candidates.</p>
+<p><img alt="" src="https://nintil.com/images/2020-01-05-longevity/image-20200116074340112.png" /></p>
+</section>
+<section id="inflammation">
+<h3>2. Inflammation<a class="headerlink" href="#inflammation" title="Permalink to this headline">#</a></h3>
+<p><img alt="" src="https://www.mypathologyreport.ca/wp-content/uploads/2021/12/inflammatory-cells.jpg" /></p>
+<p>Inflammation is a response to perceived threats in the body, such as pathogens or tissue damage. While this response is beneficial in the short term, chronic inflammation, or “inflammaging,” can cause tissue damage and increase the risk of developing diseases such as cancer. This type of inflammation can be triggered by factors such as the accumulation of senescent cells and unhealthy lifestyles, such as overeating.</p>
+<p>Cellular senescence is a state in which cells stop dividing and enter a state of arrested growth. This is a natural protective mechanism that prevents damaged or potentially harmful cells from reproducing and potentially becoming cancerous. However, when a large number of senescent cells accumulate in the body, they can release harmful factors known as the senescence-associated secretory phenotype (SASP) that <strong>can lead to chronic inflammation</strong> and tissue damage.</p>
+<p><strong>What can we potentially do computationally?</strong> Given that <a class="reference external" href="https://febs.onlinelibrary.wiley.com/doi/full/10.1111/febs.15061">regulation of inflammation could be considered an anti-aging intervention</a>
+Finding novel targes based on the modulation of inflammatory pathways might be a viable direction.</p>
+</section>
+<section id="microbiome-disturbance">
+<h3>3. Microbiome disturbance<a class="headerlink" href="#microbiome-disturbance" title="Permalink to this headline">#</a></h3>
+<p><img alt="" src="https://newbrainnutrition.com/wp-content/uploads/2020/04/1.2.1-Dictionary-microbiome2.png" /></p>
+<p>Next-generation sequencing technologies have facilitated the identification of significant changes in the gut microbiome with <a class="reference external" href="https://pubmed.ncbi.nlm.nih.gov/33619379/#:~:text=The%20identified%20microbiome%20pattern%20of,4%2Dyear%20follow%2Dup.">age</a>. <em>“Our analysis identifies increasing compositional uniqueness of the gut microbiome as a component of healthy ageing, which is characterized by distinct microbial metabolic outputs in the blood.”</em></p>
+<p>This includes shifts in microbial populations and reduced species diversity. These changes, combined with the age-related loss of structural integrity in the gut and other barrier tissues (e.g. the blood-brain barrier), can contribute to the development of inflammation.</p>
+</section>
+<section id="altered-mechanical-properties">
+<h3>4. Altered mechanical properties<a class="headerlink" href="#altered-mechanical-properties" title="Permalink to this headline">#</a></h3>
+<p>The altered mechanical properties of cells and their extracellular environment can have significant impacts on cellular processes. For example, fibroblast senescence is accompanied by a shift from a mobile pool of actin that can be easily polymerized and depolymerized during cell motility, to stable stress fibers of f-actin anchored through focal adhesions to the substrate. This change is particularly pronounced in cells from patients with premature aging syndromes and is likely to affect cell motility and cell-cell communication. Changes in motility are particularly relevant to the aging of the innate immune system, where neutrophils from older donors can cause significant tissue damage during migration to sites of inflammation. Modification of the small G protein signaling pathways that regulate such cytoskeletal motility through treatment with statins has been shown to improve the function of older neutrophils in vitro and to result in a significant increase in 6-month mortality in older adults admitted to the ICU with pneumonia.</p>
+<p>The nucleoskeleton also undergoes changes during aging, with the nuclear lamina becoming destabilized and chromatin being extruded into the cytoplasm as chromatin-containing bodies (CCFs) that trigger the senescence-associated secretory phenotype (SASP). Importantly, the nuclear lamina is highly defective in Hutchison-Gilford progeria, and clinical trials of farnesyl transferase inhibitors that restore nuclear envelope integrity have been shown to increase patient lifespan. One example falling into this would be the ECM we touched upon previously.</p>
+</section>
+<section id="splicing-regulation">
+<h3>5. Splicing regulation<a class="headerlink" href="#splicing-regulation" title="Permalink to this headline">#</a></h3>
+<p><strong>Splicing regulatory elements (SREs)</strong> are cis-acting sequences in pre-messenger RNA (pre-mRNA) that regulate the splicing of introns. SREs can either enhance or suppress splicing, and they act by recruiting trans-acting splicing factors that either activate or suppress the recognition of splice sites or the assembly of the spliceosome. The context-dependence of SREs can be categorized into two groups: (a) location-dependent activity, where the activity of SREs varies depending on their relative positions within pre-mRNA, and (b) gene-dependent activity, where the activity of SREs varies depending on the gene in which they are located.</p>
+<p>Studies have shown that dysregulation of RNA processing is common in aging human populations [Holly AC, et. al. <em>Changes in splicing factor expression are associated with advancing age in man</em>] and interventions that reverse senescent phenotypes often act by restoring youthful patterns of splicing factor expression [Latorre E, <a class="reference external" href="http://et.al">et.al</a>. <em>Small molecule modulation of splicing factor expression is associated with rescue from cellular senescence</em>]. These changes in RNA processing add to the known changes in genome integrity, transcriptional efficacy, and epigenetic regulation that occur during the aging process. So what can we investigate computationally? Having a <a class="reference external" href="https://www.encodeproject.org/software/regulatory-elements-database/">database of regulatory factors</a>, and then investigating whether they regulate the mRNA was one of the efforts <a class="reference external" href="https://scholarworks.iupui.edu/bitstream/handle/1805/13762/Lin_iupui_0104D_10200.pdf?sequence=1">here</a>. Replicating the study with newer regulatory factors and more sophisticated insilico methods is a viable option.</p>
+<p>Final interesting research question, that one could pursue, is elucidating the combined effect of most of these hallmarks. Askin the questions of the type</p>
+</section>
+</section>
+<section id="aging-clocks-causality-and-the-future-of-evaluating-biological-age">
+<h2>Aging clocks, causality and the future of evaluating biological age.<a class="headerlink" href="#aging-clocks-causality-and-the-future-of-evaluating-biological-age" title="Permalink to this headline">#</a></h2>
+<p><img alt="" src="https://sbpdiscovery.org/sites/default/files/styles/720x375/public/2017-04/aging%20clock_res.jpg?itok=u4BRm2N6" /></p>
+<p><strong>Aging clocks</strong> can estimate an organism’s biological age, which is the age of its cells, tissues and systems. The reason why this is such an interesting question is because we need really good proxies to know wether some pertrubation worked or not. The default of administrating something and waiting for it to work, in a human model or not, is simply not feasible for longevity related studies. Aging clocks can provide valuable tools to assess health states and evaluate the effectiveness of anti-aging interventions.</p>
+<p>There are three broad categories of the aging clocks:</p>
+<ul class="simple">
+<li><p>Molecular/Omics based (i.e. omics + molecules based)</p></li>
+<li><p>Phenotype based (i.e. retina or face based)</p></li>
+<li><p>Functional based (i.e. hematology)</p></li>
+</ul>
+<p>Examples of computational research in this direction:</p>
+<p>Deep neural networks (DNNs) can be utilized to extract valuable features from large sets of biomarkers obtained through typical blood testing. For instance, Putin et al. (2016) trained a consortium of DNNs on biochemical parameters from 62,419 individuals and obtained impressive performance in the prediction of chronological age (R2 = 0.8). Furthermore, this method allowed for feature extraction and identified albumin, glucose, alkaline phosphatase, urea, and erythrocytes as the most promising markers for predicting human chronological age (Putin et al., 2016). This exercise highlights the data mining capabilities of these modern techniques, even in extensively studied fields such as biomarkers.</p>
+<p>Feature selection is a crucial and actionable area when considering the potential application of -omics sciences. While large-scale omics data are indispensable for providing insights into the aging phenotype, a specific number of actionable elements must be identified in order to enable intervention strategies. Galkin et al. (2020) also used deep learning (DL) to predict chronological age, but trained their algorithms on the taxonomic profiling of human gut microbiomes. This is a strategic decision, considering the increasing significance of the microbiota and, subsequently, nutrition for wellbeing and health.</p>
+<p>The most important aspect is the input data/biomarkers that are informative in infering the biological information. Here are some different types of aging clocks, based on their input data:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.nature.com/articles/s43587-021-00134-3">The Epigenetic Clock</a></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8279523/">DeepMAge: A Methylation Aging Clock Developed with Deep Learning</a></p></li>
+<li><p><a class="reference external" href="https://www.cell.com/trends/pharmacological-sciences/fulltext/S0165-6147(19)30114-2">Deep Aging Clocks</a></p></li>
+<li><p><a class="reference external" href="https://www.sciencedirect.com/science/article/abs/pii/S0047637419301976">Multi-omics Clocks</a></p></li>
+<li><p><a class="reference external" href="https://www.researchgate.net/figure/Deep-learning-based-hematological-clocks-demonstrated-accelerated-aging-rates-in-smokers_fig2_330398845">Deep learning hematological clocks</a></p></li>
+<li><p><a class="reference external" href="https://www.nature.com/articles/cr201536">Facial features clocks</a></p></li>
+<li><p>etc</p></li>
+</ul>
+<p>It still remains to be seen wether this will be enough to infer goodness of a certain intervention. It would be great if this could be used as a clinical target proxy to pass the FDA trials. Time will tell.</p>
+<p>Important future topic for this sort of inference is causality. Having <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2022.10.07.511382v1">causal biomarkers</a> that actually contribute to the true biological age would not only allow insight in terms of longevity, but also allow to discover novel biology as well.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Chapter%202%20-%20Biology%20basics%20and%20measuring%20biology.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Chapter 2 - Biology basics and measuring biology</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Chapter%204%20-%20Longevity%20interventions%20and%20models.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 4 - Longevity interventions and models</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Noah Weber<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

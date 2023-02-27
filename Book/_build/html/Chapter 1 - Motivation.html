@@ -1,0 +1,677 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Chapter 1 - Motivation and brief overview &#8212; Computational Longevity</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chapter 2 - Biology basics and measuring biology" href="Chapter%202%20-%20Biology%20basics%20and%20measuring%20biology.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Computational Longevity</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Chapter 1 - Motivation and brief overview
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter%202%20-%20Biology%20basics%20and%20measuring%20biology.html">
+   Chapter 2 - Biology basics and measuring biology
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter%203%20-%20Hallmarks%20and%20aging%20clocks.html">
+   Chapter 3 - Hallmarks and aging clocks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter%204%20-%20Longevity%20interventions%20and%20models.html">
+   Chapter 4 - Longevity interventions and models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Chapter%205%20-%20References.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Chapter 1 - Motivation.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Chapter 1 - Motivation and brief overview
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contents-of-this-book">
+     Contents of this book:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-1-motivation">
+   Chapter 1 - Motivation
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#biology-is-just-an-iteration-cycle">
+     Biology is just an iteration cycle
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-gets-measured-gets-simulated">
+     What gets measured gets simulated
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-longevity">
+     Why longevity?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#future-horizon-of-longevity">
+   Future Horizon of Longevity
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-genetic-engineering-breakthrough">
+     The genetic engineering breakthrough.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-regenerative-medicine-breakthrough">
+     The regenerative medicine breakthrough.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-health-care-hardware-breakthrough">
+     The health-care hardware breakthrough.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-health-data-intelligence-breakthrough">
+     The health data intelligence breakthrough.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Chapter 1 - Motivation and brief overview</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Chapter 1 - Motivation and brief overview
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contents-of-this-book">
+     Contents of this book:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-1-motivation">
+   Chapter 1 - Motivation
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#biology-is-just-an-iteration-cycle">
+     Biology is just an iteration cycle
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-gets-measured-gets-simulated">
+     What gets measured gets simulated
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#why-longevity">
+     Why longevity?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#future-horizon-of-longevity">
+   Future Horizon of Longevity
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-genetic-engineering-breakthrough">
+     The genetic engineering breakthrough.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-regenerative-medicine-breakthrough">
+     The regenerative medicine breakthrough.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-health-care-hardware-breakthrough">
+     The health-care hardware breakthrough.
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-health-data-intelligence-breakthrough">
+     The health data intelligence breakthrough.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <hr class="docutils" />
+<blockquote>
+<div><p><em>Important notes</em>:</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Goal of this project is to be a community writing for computational longevity topics.</p></li>
+<li><p>This means that corrections and/or additions that are substantial will be rewarded with 100$ worth of ETH. Submit a PR here with the instruction how in README: <a class="reference external" href="https://github.com/noahweber1/Computational_Longevity">https://github.com/noahweber1/Computational_Longevity</a></p></li>
+<li><p>This is a rolling set of writings, meaning information will be added in perpetuity.</p></li>
+<li><p>You can navigate to the desired (sub-)chapters using the dropdown on the right.</p></li>
+<li><p>To cite this work use the following format: <em>Weber, Noah (2022). Computational Longevity. <a class="reference external" href="https://noahweber1.github.io/Computational_Longevity/Chapter%201%20-%20Motivation.html">https://noahweber1.github.io/Computational_Longevity/Chapter 1 - Motivation.html</a></em></p></li>
+</ul>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="chapter-1-motivation-and-brief-overview">
+<h1>Chapter 1 - Motivation and brief overview<a class="headerlink" href="#chapter-1-motivation-and-brief-overview" title="Permalink to this headline">#</a></h1>
+<section id="contents-of-this-book">
+<h2>Contents of this book:<a class="headerlink" href="#contents-of-this-book" title="Permalink to this headline">#</a></h2>
+<ol>
+<li><p><em>Motivation for writing this book:</em></p>
+<blockquote>
+<div><p>a) Analogy based learning between longevity and the computer science.</p>
+</div></blockquote>
+<blockquote>
+<div><p>b) Future horizont of some of the breakthroughs and advances relevant to longevity.</p>
+</div></blockquote>
+</li>
+<li><p><em>Biology basics, measurements, databases and computational approaches towards elucidating longevity:</em></p>
+<blockquote>
+<div><p>a) Basics of (longevity) biology.</p>
+</div></blockquote>
+<blockquote>
+<div><p>b) Quantifying biological research in longevity.</p>
+</div></blockquote>
+<blockquote>
+<div><p>c) Tools for measuring the data.</p>
+</div></blockquote>
+<blockquote>
+<div><p>d) Data sources specifically dedicated to aging.</p>
+</div></blockquote>
+<blockquote>
+<div><p>e) Network and omics approach to research aging.</p>
+</div></blockquote>
+</li>
+<li><p><em>Hallmarks and biomarkers of aging. How can we computationally explore them:</em></p>
+<blockquote>
+<div><p>a) Hallmarks of aging and how tackle them computationally.</p>
+</div></blockquote>
+<blockquote>
+<div><p>b) New hallmarks of aging and how tackle them computationally.</p>
+</div></blockquote>
+<blockquote>
+<div><p>c) Aging clocks, causality and the future of evaluating biological age.</p>
+</div></blockquote>
+</li>
+<li><p><em>Longevity interventions and animal models to test these interventions:.</em></p>
+<blockquote>
+<div><p>a) Molecular pathways involved in the aging process.</p>
+</div></blockquote>
+<blockquote>
+<div><p>b) Chemical basis for longevity.</p>
+</div></blockquote>
+<blockquote>
+<div><p>c) Environmental basis for longevity.</p>
+</div></blockquote>
+<blockquote>
+<div><p>d) Alternative (less known and researched) longevity interventions .</p>
+</div></blockquote>
+<blockquote>
+<div><p>e) Model organisms of aging and its alternatives.</p>
+</div></blockquote>
+</li>
+</ol>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="chapter-1-motivation">
+<h1>Chapter 1 - Motivation<a class="headerlink" href="#chapter-1-motivation" title="Permalink to this headline">#</a></h1>
+<p><img alt="" src="https://www.genengnews.com/wp-content/uploads/2019/07/205397_web.jpg" /></p>
+<p>Learning a new discipline is easier if we can apply <a class="reference external" href="https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1428-6_11#:~:text=Learning%20by%20analogy%20is%20a,linguistic%20competence%2C%20divergent%20thinking">analogy-based learning</a>.
+Coming from a computational background and trying to decipher research papers of the form: <a class="reference external" href="https://onlinelibrary.wiley.com/doi/10.1111/acel.13488">“Metformin treatment of diverse Caenorhabditis species reveals the importance of genetic background in longevity”</a> has proven to be hard.</p>
+<p>What is Metformin? What is Caenorhabditis? Is the optimal model? What is a model in the first place? What is the genetic role in longevity? etc.
+To navigate this space, one needs to start from <a class="reference external" href="https://en.wikipedia.org/wiki/First_principle#:~:text=A%20first%20principle%20is%20a,to%20as%20postulates%20by%20Kantians.">first principles</a> of biology.</p>
+<p>Biology is complex. So are computers. Can we find a mapping between software and biology related terms?</p>
+<p>Example of what this analogy comparison would look like is this:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Biology</p></th>
+<th class="head"><p>Software</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gene">gene</a>  -&gt;</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Library_(computing)">library</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Genome">genome</a>  -&gt;</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Bytecode">bytecode</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Translation_(biology)">translation</a>  -&gt;</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Disassembler">disassembly</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Protein">protein</a>  -&gt;</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Function_(computer_science)">function</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Protein_secondary_structure">protein secondary structure</a>  -&gt;</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Basic_block">basic blocks</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Protein_quaternary_structure">quaternary structure</a>  -&gt;</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Inline_expansion">compiled function with inlining</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Protein_structure_prediction">protein structure prediction</a>  -&gt;</p></td>
+<td><p><a class="reference external" href="https://www.hex-rays.com/products/ida/tech/flirt/in_depth/">library identification</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Genomics#Genome_analysis">genome analysis</a>  -&gt;</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Static_program_analysis">static analysis</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Molecular_dynamics">molecular dynamics</a>  -&gt;</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Dynamic_program_analysis">dynamic analysis</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Nucleotide">nucleotide</a>  -&gt;</p></td>
+<td><p><a class="reference external" href="https://en.wikipedia.org/wiki/Byte">byte</a></p></td>
+</tr>
+</tbody>
+</table>
+<p>While not a perfect mapping it serves a purpose:</p>
+<blockquote>
+<div><p>All of the problems that are going to be faced in biology domain could be tackled with already proposed solutions in software domain.</p>
+</div></blockquote>
+<p>But why care?</p>
+<section id="biology-is-just-an-iteration-cycle">
+<h2>Biology is just an iteration cycle<a class="headerlink" href="#biology-is-just-an-iteration-cycle" title="Permalink to this headline">#</a></h2>
+<p>We care because solving aging entails solving biology. And solving biology means finding a better iteration cycle:</p>
+<p><img alt="biology_iterations" src="https://i.ibb.co/PWmtWWp/biology-debugging.jpg%22" /></p>
+<ol class="simple">
+<li><p><strong>Observe Phenotype</strong> means observing the effect of the intervention on everything that can be measured. Besides the external changes of the organism, internal measuraments such as <a class="reference external" href="https://en.wikipedia.org/wiki/Biomarker">biomarkers</a> are also relevent.</p></li>
+<li><p><strong>Update the model</strong> means using the observational information to enhance your (computational) understanding of the particular biological part. One example for that can be a computer simulation of particular molecular pathway. Other one could be using animal models that are most similiar to what we are trying to tackle in humans. Using this model we can then make educated therapeutic suggestions.</p></li>
+<li><p><strong>Suggest therapeutic intervention</strong> means utilizing the previous information in order to make an intervention that will hopefully result in more favorable observations in step 1.</p></li>
+</ol>
+<p>Problem is, biological iteration cycles take a lot of time. As I am writting this, the formatted Markdown text is being rendered on adjecent window. The (“software”) iteration cycle is fast, since I can observe all the changes in almost real time. Hence I can adjust accordingly in timely fashion.</p>
+<p><em>We need an biological alternative of real time rendering.</em></p>
+</section>
+<section id="what-gets-measured-gets-simulated">
+<h2>What gets measured gets simulated<a class="headerlink" href="#what-gets-measured-gets-simulated" title="Permalink to this headline">#</a></h2>
+<p>In order to achieve the biological alternative of real time rendering, we face complications on several levels:</p>
+<ol class="simple">
+<li><p><strong>Oversimplification of biology.</strong> Example: <a class="reference external" href="https://en.wikipedia.org/wiki/Apoptosis">Apoptosis pathway</a>. Left is the oversimplified understanding. Right is the actual one. Hope is that the data will give us insight in unexplored biological mechanisms.
+<a href="https://ibb.co/W0yX9R0"><img src="https://i.ibb.co/cwF95sw/biology-complexity.png" alt="biology-complexity" border="0"></a></p></li>
+<li><p><strong>Capturing data.</strong> In order to simulate biology we need to comprehensively capture the information on each cellular level.</p></li>
+<li><p><strong>Interpeting data.</strong> In order to analyse this data, there needs to be appropriate <a class="reference external" href="https://omicstutorials.com/bioinformatics-tools-softwares-programmes/">tools</a> operating on them.</p></li>
+<li><p><strong>Accurate models.</strong> Both in terms of animal and computational models we are only approximating of what should happen in humans. Translational issues are a huge problem.</p></li>
+<li><p><strong>Causality.</strong> Just because we have identified some patterns does not mean that these patterns are causative, i.e. explain the biological process in a mechanistical manner. This is very important, because if we can not use the computational modelling to actually derive biological theories, then it is all just a black box.</p></li>
+<li><p>And many others…</p></li>
+</ol>
+</section>
+<section id="why-longevity">
+<h2>Why longevity?<a class="headerlink" href="#why-longevity" title="Permalink to this headline">#</a></h2>
+<p>Ever heard of a 25 year old with Alzheimers? Me neither. Longevity is arguably root cause for majority of diseases. If we could solve longevity we could potentially solve majority of diseases.</p>
+<blockquote>
+<div><p><em>But what is the exact problem definition?</em></p>
+</div></blockquote>
+<p><strong>Prolonged health span, not only life span.</strong></p>
+<p>I like to think of the longevity problem as a multi-objective optimization.</p>
+<p><a href="https://imgbb.com/"><img src="https://i.ibb.co/J5Vx6DF/longevity-mo.jpg" alt="longevity-mo" border="0"></a></p>
+<p>We have two variables. X is the the health span and Y is the life span.
+Usually our health span peaks around 50 (or even sooner depending on the definition) and we proceed with life (span). What the actuall goal with longevity should be (or maybe not if you read some research papers) is to first optimize for the X variable as we are optimizing for the Y. Not the other way around. With this objective in mind we can aim for long, healthy life span. Not necesseraly solely life span for the sake of it.</p>
+<p>Given that we have been trying to <a class="reference external" href="https://www.amazon.com/dp/B00SHPD0N4/ref=dp-kindle-redirect?_encoding=UTF8&amp;btkr=1">solve this problem</a> for thousands of years, and still fail, is there a reasonable argument we could tackle longevity successfully now?</p>
+<p>We need some breakthroughs to argue for the <strong>future horizon of longevity</strong>. What are the developments coming from biology and chemistry and how can we supplement them computationally?</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="future-horizon-of-longevity">
+<h1>Future Horizon of Longevity<a class="headerlink" href="#future-horizon-of-longevity" title="Permalink to this headline">#</a></h1>
+<p>One of the key challenges to understanding complex systems is the fallacy of assuming that correlation implies causation. For instance, the telomere shortening theory is widely regarded as a key factor in longevity. Telomeres are repetitive nucleotide sequences found at the ends of our chromosomes that are associated with proteins. The theory is that the length of telomeres directly impacts longevity. Scientists observed that mice with shorter telomeres tend to have shorter lifespans, and vice versa. However, when the theory was tested in humans, the results were less clear. In some cases, excess telomerase was linked to cancer. This raises the question of whether the length of telomeres is a cause of longevity, or if it is an effect. More data is needed to determine the answer.</p>
+<p>So we need some new breakthroughs that could potentially elucidate more insight based on data and underlying biology.</p>
+<p>Here are some of the examples, many of which we will extend upon in the upcoming chapters:</p>
+<section id="the-genetic-engineering-breakthrough">
+<h2>The genetic engineering breakthrough.<a class="headerlink" href="#the-genetic-engineering-breakthrough" title="Permalink to this headline">#</a></h2>
+<p>The Human Genome Project, which was completed in 2003, successfully sequenced (almost) the entire human genome. This means we now have an (almost) complete map of all 25,000 individual genes. This information allows us to predict many hereditary diseases, the likelihood of developing cancer, and other unknowns where the cause and effect relationship is still not well understood. However, given that our genes do not change much from birth, what other implications does gene sequencing have? Our epigenome, which is the system of chemical modifications around our genes that determines how they are expressed, does change. Furthermore, according to longevity scientists, the biological age of our epigenome, rather than our actual age, appears to be far more significant.</p>
+<p><strong>Why is this important for machine learning?</strong> Biological age measuring solutions, such as Horvath clocks, enable us to measure the “aging score” and effectively measure the chemical activity within the epigenome. This allows us to simulate longevity experiments and observe the effects on a human cell long before that person dies. <a class="reference external" href="https://epigenie.com/the-epigenetic-clock-from-deep-space-to-deep-learning/">Deep learning can be used to improve the Horvath clock accuracy</a>. In addition, the cost of genome sequencing has decreased significantly, making it more affordable to analyze the enormous amounts of data produced. One genome contains three billion nucleotide base pairs, and even a small change in just one letter (one nucleotide) in the genome can have severe side effects.</p>
+<p>One example of using our understanding of the genome and the effects of genes is gene therapy. This approach focuses on genetic modifications of cells to produce a therapeutic effect. For instance, CAR T-cell therapy is a cancer treatment that is based on gene therapy. In this approach, a patient’s own immune system T cells are modified to fight specific types of cancer. Machine learning can be used to <a class="reference external" href="https://www.isct-cytotherapy.org/article/S1465-3249(19)30527-4/fulltext">improve the manufacturing process of CAR T-cells</a>.</p>
+</section>
+<section id="the-regenerative-medicine-breakthrough">
+<h2>The regenerative medicine breakthrough.<a class="headerlink" href="#the-regenerative-medicine-breakthrough" title="Permalink to this headline">#</a></h2>
+<p>As we age, our bodily systems and functions begin to deteriorate. Longevity is not just about living longer, but also about making the most of the years we have. To achieve this, we need technologies that can repair these functions. One such technology is stem cell therapy. This field has been a topic of discussion for many years, but what has been emerging and further advancing it is, as you might have guessed, artificial intelligence (AI). AI can aid in many aspects of stem cell technology, with a formal overview of how AI can be used to tackle different parts of stem cell technology available <a class="reference external" href="https://www.eurekaselect.com/186710/article">here</a>.</p>
+</section>
+<section id="the-health-care-hardware-breakthrough">
+<h2>The health-care hardware breakthrough.<a class="headerlink" href="#the-health-care-hardware-breakthrough" title="Permalink to this headline">#</a></h2>
+<p>Of all the potential breakthroughs, this one holds the most potential. Every year, 60 million lives are lost, and more than half of those deaths are due to reversible diseases if caught early. The problem is that we are not monitoring frequently and granularly enough to react in time. Our current approach is “reactive” rather than “proactive.” If we can get this data early and accurately enough, we will be able to diagnose the condition at hand. This brings us to one of the fundamental principles of AI: it’s the data that makes the difference, not the machine learning algorithms. If you have high-quality (labeled) data, the algorithms that operate on that data are not as important. And yes, current wearables are very limited in their capabilities. However, this is changing quickly, as this recent <a class="reference external" href="https://www.nature.com/articles/s41591-021-01652-8">Nature</a> publication shows. We can now measure deep tissue processes without invasive surgery. He who owns the data owns the AI.</p>
+</section>
+<section id="the-health-data-intelligence-breakthrough">
+<h2>The health data intelligence breakthrough.<a class="headerlink" href="#the-health-data-intelligence-breakthrough" title="Permalink to this headline">#</a></h2>
+<p>The amount and quality of data coming from wearable devices is a key factor driving the longevity revolution. Another important aspect is the practice of precision medicine, which involves customizing health diagnostics to individual characteristics. We are getting more and more publicly available data for this, such as <a class="reference external" href="https://www.biorxiv.org/content/10.1101/2022.05.01.489928v2">here</a>. However, privacy issues can be a problem when it comes to using machine learning algorithms on this data. Sending the data to a server for diagnostic computation can be problematic.</p>
+<p>There are two potential solutions to this problem: on-edge machine learning and differential privacy. The first solution leverages the fact that our current devices (not just phones) have become incredibly powerful. They can now perform computations that were previously only possible on personal computers or clusters. The computer used to send the first man to the moon is now weaker than most modern phones. This means that expensive machine learning calculations can be performed on phones and smaller medical devices, avoiding the need to send sensitive data to servers. The second paradigm is that of differential privacy, which involves injecting carefully controlled noise into the data to mask it, while still allowing the algorithms to extract patterns and make diagnoses. This is not a new concept, and is what companies like Google and Apple claim to use when processing our private data.</p>
+<p><strong>NOTE</strong>: Privacy and its solutions will become even more critical as we move towards the internet of bodies (IoB), where all the sensors that measure our data are connected to each other and to other people’s data. Collective intelligence is more powerful than individual intelligence, so this step is essential for improving AI. However, it will also introduce new security challenges that will need to be addressed using solutions like those discussed above.</p>
+<p>The abundance of data is closely linked to better diagnostics. Novel, non-invasive, cheap, and highly effective diagnostic methods include:</p>
+<ol class="simple">
+<li><p><strong>Liquid biopsy</strong>, which allows examination of bodily fluids like urine, saliva, spinal fluid, or blood to find traces of diseases, examine DNA or RNA, and more. This is non-invasive and cheap, and the fact that we can extract a lot of information from a single drop of blood opens many doors for diagnosis. As we understand and analyze blood data, for example, we can improve our machine learning algorithms. Some companies are already doing this, building diagnostic recommender systems based on personal blood information. <strong>Data</strong>? <a class="reference external" href="https://academic.oup.com/nar/article/47/D1/D113/5144140?login=false">liqDB</a> is a small-RNAseq knowledge discovery database for liquid biopsy studies. <strong>What could you do with it?</strong> With this and other liquid biopsy databases, labels indicate different diseases based purely on bodily fluid measurements. There is potential to expand this to other, unlabeled diseases and see if accurate inference can be performed.</p></li>
+<li><p><strong>Genetic diagnostics</strong> is a rapidly growing area of research and development in the healthcare industry. Advances in machine learning algorithms have enabled companies to create personalized diet plans based on an individual’s genetic makeup. However, the real challenge in this field is not the development of ML algorithms, but rather the creation of data to support accurate inferences. A comprehensive overview of the applications and databases in the field can be found <a class="reference external" href="https://genomemedicine.biomedcentral.com/articles/10.1186/s13073-019-0689-8">here</a>.</p></li>
+<li><p><strong>Epigenome diagnostics</strong> is a promising area for early disease detection. Changes in the chemical compounds and processes that regulate gene expression, known as epigenetic changes, can be used to detect diseases earlier and more accurately than traditional genetic approaches. A wide range of applications, from supervised learning to unsupervised learning to reinforcement learning, are possible in this field. For example, unsupervised learning has been used to profile high-resolution comparative genomic hybridization and RNA sequencing data in order to analyze chromosomal alterations and dysregulated gene expression in tumor samples of patients with fibrolamellar hepatocellular carcinoma. This application illustrates the importance of a multidisciplinary approach to using AI in epigenome diagnostics. <a class="reference external" href="https://epigenie.com/epigenetic-tools-and-databases">Epigenetic Tools and Databases</a> can be used as a starting point for research in this field.</p></li>
+<li><p><strong>The human microbiome</strong>, consisting of the microorganisms that inhabit the digestive tract, is closely linked to health and longevity. However, the unique combination of microorganisms in each individual makes it difficult to analyze this data and make accurate inferences. To overcome this challenge, domain knowledge from clinical experts must be combined with curated datasets and AI algorithms to accurately predict diseases based on the microbiome. The <a class="reference external" href="https://commonfund.nih.gov/hmp/databases">Human Microbiome Project Database</a> is a valuable resource for researchers in this field. A review of methods for applying AI to microbiome data, including the use of deep learning networks to predict antibiotic resistance genes, can be found <a class="reference external" href="https://www.frontiersin.org/articles/10.3389/fmicb.2021.634511/full">here</a>.”</p></li>
+</ol>
+<p>If one peels through the layers of aging problems and rephrase these challenges in terms of information and data, one can see that aging can be tackled computationally with AI.</p>
+<p>But for now lets stick to biology basics and introduce some definitions.</p>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="Chapter%202%20-%20Biology%20basics%20and%20measuring%20biology.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Chapter 2 - Biology basics and measuring biology</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Noah Weber<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

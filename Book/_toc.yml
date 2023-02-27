@@ -1,0 +1,7 @@
+format: jb-article
+root: Chapter 1 - Motivation
+sections:
+- file: Chapter 2 - Biology basics and measuring biology
+- file: Chapter 3 - Hallmarks and aging clocks
+- file: Chapter 4 - Longevity interventions and models
+- file: Chapter 5 - References
