@@ -1,3 +1,5 @@
+Wiki can be found here: https://noahweber1.github.io/comp_longevity/Chapter%201%20-%20Motivation.html
+
 # Computational_Longevity---HOW TO CONTRIBUTE GUIDELINE
 
 1. Clone this repo: 'git clone https://github.com/noahweber1/comp_longevity.git'
